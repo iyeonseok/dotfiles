@@ -1,0 +1,10 @@
+filetype indent on
+
+set colorcolumn=81
+set hlsearch
+set ignorecase
+set number
+set ruler
+set smartcase
+
+syntax enable
