@@ -4,8 +4,8 @@ setup_script_path=$(pwd)/$0
 dotfiles_root_path=$(dirname $setup_script_path)
 
 function link_file {
-  source=$dotfiles_root_path/$1 
-  target=$2
+  local source=$dotfiles_root_path/$1
+  local target=$2
 
   if [ -f $target ]
   then
