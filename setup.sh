@@ -4,18 +4,14 @@ setup_script_path=$(pwd)/$0
 dotfiles_root_path=$(dirname $setup_script_path)
 
 function main {
-  # bash
   link_file bash/bashrc ~/.bashrc
   link_file bash/bash_profile ~/.bash_profile
 
-  # git
   link_file git/gitconfig ~/.gitconfig
   link_file git/gitignore ~/.gitignore
 
-  # tmux
   link_file tmux/tmux.conf ~/.tmux.conf
 
-  # vim
   link_file vim/vimrc ~/.vim/vimrc
 }
 
