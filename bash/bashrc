@@ -1,4 +1,8 @@
-RESET='\e[0m'
-REVERSE='\e[7m'
+function set_prompt {
+  local reset='\e[0m'
+  local reverse='\e[7m'
 
-PS1="$REVERSE\u@\h: \w$RESET\n\\$ "
+  PS1="$reverse\u@\h: \w$reset\n\\$ "
+}
+
+set_prompt
