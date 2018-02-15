@@ -10,6 +10,7 @@ function main {
   link_file git/gitconfig ~/.gitconfig
   link_file git/gitignore ~/.gitignore
 
+  git clone https://github.com/tmux-plugins/tmux-resurrect ~/.tmux/plugins/tmux-resurrect
   link_file tmux/tmux.conf ~/.tmux.conf
 
   link_file vim/vimrc ~/.vim/vimrc
