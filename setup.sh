@@ -4,15 +4,28 @@ setup_script_path=$(pwd)/$0
 dotfiles_root_path=$(dirname $setup_script_path)
 
 function main {
+  setup_bash
+  setup_git
+  setup_tmux
+  setup_vim
+}
+
+function setup_bash {
   link_file bash/bashrc ~/.bashrc
   link_file bash/bash_profile ~/.bash_profile
+}
 
+function setup_git {
   link_file git/gitconfig ~/.gitconfig
   link_file git/gitignore ~/.gitignore
+}
 
+function setup_tmux {
   git clone https://github.com/tmux-plugins/tmux-resurrect ~/.tmux/plugins/tmux-resurrect
   link_file tmux/tmux.conf ~/.tmux.conf
+}
 
+function setup_vim {
   link_file vim/vimrc ~/.vim/vimrc
 }
 
