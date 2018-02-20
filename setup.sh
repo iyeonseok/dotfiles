@@ -35,12 +35,6 @@ function link_file {
   local source=$dotfiles_root_path/$1
   local target=$2
 
-  if [ -f $target ]
-  then
-    rm $target
-    echo removed $target
-  fi
-
   ln -s $source $target
   echo made symbolic link from $target to $source
 }
