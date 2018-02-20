@@ -1,5 +1,7 @@
 filetype indent on
 
+let g:python_highlight_all = 1
+
 set colorcolumn=81
 set hlsearch
 set ignorecase

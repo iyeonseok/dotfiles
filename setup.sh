@@ -28,6 +28,7 @@ function setup_tmux {
 function setup_vim {
   link_file vim/vimrc ~/.vim/vimrc
   link_file vim/indent/python.vim ~/.vim/indent/python.vim
+  git clone https://github.com/vim-python/python-syntax.git ~/.vim/pack/python/start/python-syntax
 }
 
 function link_file {
