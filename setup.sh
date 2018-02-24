@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-setup_script_path=$(pwd)/$0
-dotfiles_root_path=$(dirname $setup_script_path)
+script_path=$(pwd)/$0
+dotfiles_root_path=$(dirname $script_path)
 
 function main {
   setup_bash
