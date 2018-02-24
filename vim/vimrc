@@ -6,7 +6,7 @@ set colorcolumn=81
 set hlsearch
 set ignorecase
 set number
-set path+=**
+set path=**
 set ruler
 set smartcase
 set wildmenu
