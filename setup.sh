@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-script_path=$(pwd)/$0
-dotfiles_root_path=$(dirname $script_path)
+script_path="$(pwd)/${0}"
+dotfiles_root_path="$(dirname ${script_path})"
 
 function main {
   setup_bash
@@ -32,11 +32,11 @@ function setup_vim {
 }
 
 function link_file {
-  local source=$dotfiles_root_path/$1
-  local target=$2
+  local source="${dotfiles_root_path}/${1}"
+  local target="${2}"
 
-  ln -s $source $target
-  echo made symbolic link from $target to $source
+  ln -s ${source} ${target}
+  echo "made symbolic link from ${target} to ${source}"
 }
 
 main $@
