@@ -4,6 +4,8 @@ script_path="$(pwd)/${0}"
 dotfiles_root_path="$(dirname ${script_path})"
 
 function main {
+  git submodule update --init
+
   setup_bash
   setup_git
   setup_tmux
@@ -21,8 +23,8 @@ function setup_git {
 }
 
 function setup_tmux {
-  git clone https://github.com/tmux-plugins/tmux-resurrect ~/.tmux/plugins/tmux-resurrect
   link_file tmux/tmux.conf ~/.tmux.conf
+  link_file tmux/plugins/ ~/.tmux/
 }
 
 function setup_vim {
