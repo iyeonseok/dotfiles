@@ -6,3 +6,5 @@ function set_prompt {
 }
 
 set_prompt
+
+source ~/.bashrc_private
