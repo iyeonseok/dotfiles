@@ -1,3 +1,5 @@
 source ~/.bashrc
 
-source ~/.bash_profile_private
+if [[ -e ~/.bash_profile_private ]]; then
+  source ~/.bash_profile_private
+fi
