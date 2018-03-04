@@ -1,3 +1,6 @@
 [submodule "tmux/plugins/tmux-resurrect"]
 	path = tmux/plugins/tmux-resurrect
 	url = https://github.com/tmux-plugins/tmux-resurrect.git
+[submodule "vim/pack/python/start/python-syntax"]
+	path = vim/pack/python/start/python-syntax
+	url = https://github.com/vim-python/python-syntax.git
