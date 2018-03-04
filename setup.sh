@@ -4,8 +4,15 @@ script_path="$(pwd)/${0}"
 dotfiles_root_path="$(dirname ${script_path})"
 
 function main {
-  git submodule update --init
+  update_git_submodules
+  link_all
+}
 
+function update_git_submodules {
+  git submodule update --init
+}
+
+function link_all {
   setup_bash
   setup_git
   setup_tmux
@@ -13,27 +20,27 @@ function main {
 }
 
 function setup_bash {
-  link_file bash/bashrc ~/.bashrc
-  link_file bash/bash_profile ~/.bash_profile
+  link bash/bashrc ~/.bashrc
+  link bash/bash_profile ~/.bash_profile
 }
 
 function setup_git {
-  link_file git/gitconfig ~/.gitconfig
-  link_file git/gitignore ~/.gitignore
+  link git/gitconfig ~/.gitconfig
+  link git/gitignore ~/.gitignore
 }
 
 function setup_tmux {
-  link_file tmux/tmux.conf ~/.tmux.conf
-  link_file tmux/plugins/ ~/.tmux/
+  link tmux/tmux.conf ~/.tmux.conf
+  link tmux/plugins/ ~/.tmux/
 }
 
 function setup_vim {
-  link_file vim/vimrc ~/.vim/vimrc
-  link_file vim/indent/python.vim ~/.vim/indent/python.vim
-  link_file vim/pack/python/ ~/.vim/pack/
+  link vim/vimrc ~/.vim/vimrc
+  link vim/indent/python.vim ~/.vim/indent/python.vim
+  link vim/pack/python/ ~/.vim/pack/
 }
 
-function link_file {
+function link {
   local source="${dotfiles_root_path}/${1}"
   local target="${2}"
 
