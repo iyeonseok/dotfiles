@@ -9,6 +9,7 @@ set number
 set path=**
 set ruler
 set smartcase
+set wildignore+=__pycache__,*/__pycache__/*
 set wildmenu
 
 syntax enable
