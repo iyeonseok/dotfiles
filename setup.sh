@@ -36,8 +36,6 @@ function setup_tmux {
 
 function setup_vim {
   link vim/vimrc ~/.vim/vimrc
-  link vim/indent/python.vim ~/.vim/indent/python.vim
-  link vim/pack/python/ ~/.vim/pack/
 }
 
 function link {
