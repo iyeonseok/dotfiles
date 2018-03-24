@@ -36,6 +36,7 @@ function setup_tmux {
 
 function setup_vim {
   link vim/vimrc ~/.vim/vimrc
+  link vim/pack/javascript/start/vim-javascript/ ~/.vim/pack/javascript/start/
 }
 
 function link {
