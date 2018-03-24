@@ -23,8 +23,8 @@ function setup_bash {
   curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash --output "${dotfiles_root_path}/bash/git_completion.bash"
 
   link bash/git_completion.bash ~/.git_completion.bash
-  link bash/bashrc ~/.bashrc
-  link bash/bash_profile ~/.bash_profile
+  link bash/bashrc.bash ~/.bashrc
+  link bash/bash_profile.bash ~/.bash_profile
 }
 
 function setup_git {
