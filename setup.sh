@@ -22,9 +22,9 @@ function link_all {
 function setup_bash {
   curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash --output "${dotfiles_root_path}/bash/git_completion.bash"
 
-  link bash/git_completion.bash ~/.git_completion.bash
   link bash/bashrc.bash ~/.bashrc
   link bash/bash_profile.bash ~/.bash_profile
+  link bash/git_completion.bash ~/.git_completion.bash
 }
 
 function setup_git {
@@ -33,13 +33,13 @@ function setup_git {
 }
 
 function setup_tmux {
-  link tmux/tmux.conf ~/.tmux.conf
   link tmux/plugins/ ~/.tmux/
+  link tmux/tmux.conf ~/.tmux.conf
 }
 
 function setup_vim {
-  link vim/vimrc ~/.vim/vimrc
   link vim/pack/javascript/start/vim-javascript/ ~/.vim/pack/javascript/start/
+  link vim/vimrc ~/.vim/vimrc
 }
 
 function link {
