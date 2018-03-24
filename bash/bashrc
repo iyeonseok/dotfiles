@@ -6,7 +6,3 @@ function set_prompt {
 }
 
 set_prompt
-
-if [[ -e ~/.bashrc_private ]]; then
-  source ~/.bashrc_private
-fi
