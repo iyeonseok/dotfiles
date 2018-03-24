@@ -4,8 +4,17 @@ script_path="$(pwd)/${0}"
 dotfiles_root_path="$(dirname ${script_path})"
 
 function main {
-  update_git_submodules
+  update
   link_all
+}
+
+function update {
+  update_git_completion
+  update_git_submodules
+}
+
+function update_git_completion {
+  curl --output "${dotfiles_root_path}/bash/git_completion.bash" --silent https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
 }
 
 function update_git_submodules {
@@ -20,8 +29,6 @@ function link_all {
 }
 
 function setup_bash {
-  curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash --output "${dotfiles_root_path}/bash/git_completion.bash"
-
   link bash/bashrc.bash ~/.bashrc
   link bash/bash_profile.bash ~/.bash_profile
   link bash/git_completion.bash ~/.git_completion.bash
