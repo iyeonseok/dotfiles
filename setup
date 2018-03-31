@@ -54,7 +54,7 @@ function link {
   local target="${2}"
 
   ln -s ${source} ${target}
-  echo "made symbolic link from ${target} to ${source}"
+  echo "Made symbolic link from ${target} to ${source}"
 }
 
 main $@
