@@ -1,5 +1,3 @@
-autocmd VimEnter * Lexplore | copen | wincmd k | vsplit
-
 filetype plugin indent on
 
 let g:netrw_banner = 0
