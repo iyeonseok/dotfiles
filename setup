@@ -22,6 +22,10 @@ function update_git_submodules {
 }
 
 function link_all {
+  if [[ ${OSTYPE} == darwin* ]]; then
+    link macos/key_binding.dict ~/Library/KeyBindings/DefaultKeyBinding.dict
+  fi
+
   setup_bash
   setup_git
   setup_tmux
