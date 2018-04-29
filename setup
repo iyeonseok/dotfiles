@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-readonly script_path="$(pwd)/${0}"
-readonly dotfiles_root_path="$(dirname ${script_path})"
+declare -r script_path="$(pwd)/${0}"
+declare -r dotfiles_root_path="$(dirname ${script_path})"
 
 function main {
   update
@@ -55,8 +55,8 @@ function setup_vim {
 }
 
 function link {
-  local source="${dotfiles_root_path}/${1}"
-  local target="${2}"
+  declare -r source="${dotfiles_root_path}/${1}"
+  declare -r target="${2}"
 
   if [[ -L ${target} && $(readlink ${target}) == ${source} ]]; then
     echo "${target} is already linked"
@@ -72,8 +72,8 @@ function link {
 }
 
 function backup() {
-  local backup_directory="${HOME}/.dotfiles/backups"
-  local file_to_backup="${1}"
+  declare -r backup_directory="${HOME}/.dotfiles/backups"
+  declare -r file_to_backup="${1}"
 
   if [[ ! -d ${backup_directory} ]]; then
     mkdir -p ${backup_directory}
