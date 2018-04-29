@@ -44,13 +44,13 @@ function setup_git {
 }
 
 function setup_tmux {
-  link tmux/plugins/ ~/.tmux/
+  link tmux/plugins ~/.tmux/plugins
   link tmux/tmux.conf ~/.tmux.conf
 }
 
 function setup_vim {
   link vim/indent/javascript.vim ~/.vim/indent/javascript.vim
-  link vim/pack/javascript/start/vim-javascript/ ~/.vim/pack/javascript/start/
+  link vim/pack/javascript/start/vim-javascript ~/.vim/pack/javascript/start/vim-javascript
   link vim/vimrc ~/.vim/vimrc
 }
 
