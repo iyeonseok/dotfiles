@@ -58,8 +58,30 @@ function link {
   local source="${dotfiles_root_path}/${1}"
   local target="${2}"
 
+  if [[ -L ${target} && $(readlink ${target}) == ${source} ]]; then
+    echo "${target} is already linked"
+    return
+  fi
+
+  if [[ -L ${target} || -e ${target} ]]; then
+    backup ${target}
+  fi
+
   ln -s ${source} ${target}
-  echo "Made symbolic link from ${target} to ${source}"
+  echo "Created a symbolic link from ${target} to ${source}"
+}
+
+function backup() {
+  local backup_directory="${HOME}/.dotfiles/backups"
+  local file_to_backup="${1}"
+
+  if [[ ! -d ${backup_directory} ]]; then
+    mkdir -p ${backup_directory}
+  fi
+
+  local backup_file="${backup_directory}/$(basename ${file_to_backup})_$(date +%Y%m%d%H%M%S)"
+  mv ${file_to_backup} ${backup_file}
+  echo "Moved ${file_to_backup} to ${backup_file}"
 }
 
 main $@
