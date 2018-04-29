@@ -67,6 +67,11 @@ function link {
     backup ${target}
   fi
 
+  declare -r target_directory="$(dirname ${target})"
+  if [[ ! -d ${target_directory} ]]; then
+    mkdir -p ${target_directory}
+  fi
+
   ln -s ${source} ${target}
   echo "Created a symbolic link from ${target} to ${source}"
 }
