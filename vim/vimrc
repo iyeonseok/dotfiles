@@ -12,6 +12,7 @@ set number
 set path=**
 set ruler
 set smartcase
+set wildignorecase
 set wildmenu
 
 syntax enable
