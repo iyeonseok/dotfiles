@@ -9,4 +9,8 @@ if [[ -e ~/.git_completion.bash ]]; then
   source ~/.git_completion.bash
 fi
 
+if [[ ${OSTYPE} == darwin* ]]; then
+  alias ctags="$(brew --prefix)/bin/ctags"
+fi
+
 set_prompt

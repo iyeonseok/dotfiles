@@ -1,4 +1,6 @@
 .*.sw*
 .DS_Store
+.ctagsignore
 .env*
 .vimrc
+tags

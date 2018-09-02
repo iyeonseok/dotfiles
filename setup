@@ -27,6 +27,7 @@ function link_all {
   fi
 
   setup_bash
+  setup_ctags
   setup_git
   setup_tmux
   setup_vim
@@ -36,6 +37,10 @@ function setup_bash {
   link bash/bashrc.bash ~/.bashrc
   link bash/bash_profile.bash ~/.bash_profile
   link bash/git_completion.bash ~/.git_completion.bash
+}
+
+function setup_ctags {
+  link vim/pack/javascript/start/vim-javascript/extras/ctags ~/.ctags
 }
 
 function setup_git {
