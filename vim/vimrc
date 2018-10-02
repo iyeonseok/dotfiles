@@ -1,4 +1,5 @@
 autocmd BufWritePost * silent !ctags --exclude=@.ctagsignore --recurse . 2> /dev/null
+autocmd CursorHold * checktime
 autocmd VimEnter * copen | wincmd k | vsplit
 
 filetype plugin indent on
@@ -7,6 +8,7 @@ let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_winsize = 16
 
+set autoread
 set colorcolumn=81
 set exrc
 set hlsearch
