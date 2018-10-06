@@ -22,15 +22,16 @@ function update_git_submodules {
 }
 
 function link_all {
-  if [[ ${OSTYPE} == darwin* ]]; then
-    link macos/key_binding.dict ~/Library/KeyBindings/DefaultKeyBinding.dict
-  fi
-
   setup_bash
   setup_ctags
   setup_git
+  setup_prettier
   setup_tmux
   setup_vim
+
+  if [[ ${OSTYPE} == darwin* ]]; then
+    link macos/key_binding.dict ~/Library/KeyBindings/DefaultKeyBinding.dict
+  fi
 }
 
 function setup_bash {
@@ -46,6 +47,10 @@ function setup_ctags {
 function setup_git {
   link git/gitconfig ~/.gitconfig
   link git/gitignore ~/.gitignore
+}
+
+function setup_prettier {
+  link prettier/prettierrc.yaml ~/.prettierrc.yaml
 }
 
 function setup_tmux {
