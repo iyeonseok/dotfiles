@@ -1,4 +1,4 @@
-autocmd BufWritePost * silent !ctags --exclude=@.ctagsignore --recurse
+autocmd BufWritePost * silent !ctags --exclude=@.ctagsignore --recurse 2> /dev/null
 autocmd CursorHold * checktime
 autocmd VimEnter * copen | wincmd k | vsplit
 
