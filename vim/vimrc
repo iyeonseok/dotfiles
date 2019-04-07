@@ -1,8 +1,9 @@
+unlet! skip_defaults_vim
+source $VIMRUNTIME/defaults.vim
+
 autocmd BufWritePost * silent !ctags --exclude=@.ctagsignore --recurse 2> /dev/null
 autocmd CursorHold * checktime
 autocmd VimEnter * Lexplore | copen | wincmd k | vsplit
-
-filetype plugin indent on
 
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
@@ -15,9 +16,5 @@ set hlsearch
 set ignorecase
 set number
 set path=**
-set ruler
 set smartcase
 set wildignorecase
-set wildmenu
-
-syntax enable
