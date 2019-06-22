@@ -5,6 +5,8 @@ function set_prompt {
   PS1="$reverse\u@\h: \w\$($git_branch_command)$reset\n\\$ "
 }
 
+export VISUAL=vim
+
 if [[ -e ~/.git_completion.bash ]]; then
   source ~/.git_completion.bash
 fi
