@@ -56,6 +56,7 @@ function setup_tmux {
 function setup_vim {
   link vim/indent/javascript.vim ~/.vim/indent/javascript.vim
   link vim/pack/javascript/start/vim-javascript ~/.vim/pack/javascript/start/vim-javascript
+  link vim/pack/tpope/start/vim-surround ~/.vim/pack/tpope/start/vim-surround
   link vim/vimrc ~/.vim/vimrc
 }
 
