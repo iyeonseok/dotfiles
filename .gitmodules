@@ -7,3 +7,6 @@
 [submodule "vim/pack/tpope/start/vim-surround"]
 	path = vim/pack/tpope/start/vim-surround
 	url = https://github.com/tpope/vim-surround
+[submodule "vim/pack/tags/start/vim-gutentags"]
+	path = vim/pack/tags/start/vim-gutentags
+	url = https://github.com/ludovicchabant/vim-gutentags.git

@@ -1,7 +1,6 @@
 unlet! skip_defaults_vim
 source $VIMRUNTIME/defaults.vim
 
-autocmd BufWritePost * silent !ctags --exclude=@.ctagsignore --recurse 2> /dev/null
 autocmd CursorHold * checktime
 
 let netrw_liststyle = 3
