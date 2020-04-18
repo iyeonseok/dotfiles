@@ -11,6 +11,6 @@ set exrc
 set hlsearch
 set ignorecase
 set number
-set path=**
+set path+=**
 set smartcase
 set wildignorecase
