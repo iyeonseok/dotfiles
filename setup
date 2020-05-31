@@ -23,7 +23,6 @@ function update_git_submodules {
 
 function link_all {
   setup_bash
-  setup_ctags
   setup_git
   setup_prettier
   setup_tmux
@@ -38,10 +37,6 @@ function setup_bash {
   link bash/bashrc.bash ~/.bashrc
   link bash/bash_profile.bash ~/.bash_profile
   link bash/git_completion.bash ~/.git_completion.bash
-}
-
-function setup_ctags {
-  link ctags/ctags ~/.ctags
 }
 
 function setup_git {
