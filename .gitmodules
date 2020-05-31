@@ -1,8 +1,8 @@
 [submodule "tmux/plugins/tmux-resurrect"]
 	path = tmux/plugins/tmux-resurrect
 	url = https://github.com/tmux-plugins/tmux-resurrect.git
-[submodule "vim/pack/javascript/start/vim-javascript"]
-	path = vim/pack/javascript/start/vim-javascript
+[submodule "vim-javascript"]
+	path = vim/plugins/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
 [submodule "vim/pack/tags/start/vim-gutentags"]
 	path = vim/pack/tags/start/vim-gutentags
