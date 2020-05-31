@@ -54,10 +54,7 @@ function setup_tmux {
 }
 
 function setup_vim {
-  link vim/indent/javascript.vim ~/.vim/indent/javascript.vim
   link vim/plugins/ctrlp.vim ~/.vim/pack/default/start/ctrlp.vim
-  link vim/plugins/vim-gutentags ~/.vim/pack/default/start/vim-gutentags
-  link vim/plugins/vim-javascript ~/.vim/pack/languages/start/vim-javascript
   link vim/plugins/vim-surround ~/.vim/pack/default/start/vim-surround
   link vim/vimrc ~/.vim/vimrc
 }
