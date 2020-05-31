@@ -4,9 +4,12 @@
 [submodule "vim/pack/javascript/start/vim-javascript"]
 	path = vim/pack/javascript/start/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
-[submodule "vim/pack/tpope/start/vim-surround"]
-	path = vim/pack/tpope/start/vim-surround
-	url = https://github.com/tpope/vim-surround
 [submodule "vim/pack/tags/start/vim-gutentags"]
 	path = vim/pack/tags/start/vim-gutentags
 	url = https://github.com/ludovicchabant/vim-gutentags.git
+[submodule "ctrlp.vim"]
+	path = vim/plugins/ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim.git
+[submodule "surround.vim"]
+	path = vim/plugins/vim-surround
+	url = https://github.com/tpope/vim-surround.git
