@@ -4,8 +4,8 @@
 [submodule "vim-javascript"]
 	path = vim/plugins/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
-[submodule "vim/pack/tags/start/vim-gutentags"]
-	path = vim/pack/tags/start/vim-gutentags
+[submodule "gutentags"]
+	path = vim/plugins/vim-gutentags
 	url = https://github.com/ludovicchabant/vim-gutentags.git
 [submodule "ctrlp.vim"]
 	path = vim/plugins/ctrlp.vim
