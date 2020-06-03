@@ -24,7 +24,6 @@ function update_git_submodules {
 function link_all {
   setup_bash
   setup_git
-  setup_prettier
   setup_tmux
   setup_vim
 
@@ -42,10 +41,6 @@ function setup_bash {
 function setup_git {
   link git/gitconfig ~/.gitconfig
   link git/gitignore ~/.gitignore
-}
-
-function setup_prettier {
-  link prettier/prettierrc.yaml ~/.prettierrc.yaml
 }
 
 function setup_tmux {
