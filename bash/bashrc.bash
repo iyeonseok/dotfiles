@@ -1,7 +1,5 @@
 export VISUAL=vim
 
-if [[ -e ~/.git_completion.bash ]]; then
-  source ~/.git_completion.bash
-fi
+source ~/.git_completion.bash
 
 eval "$(starship init bash)"
