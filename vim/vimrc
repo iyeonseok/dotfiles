@@ -1,13 +1,5 @@
-unlet! skip_defaults_vim
 source $VIMRUNTIME/defaults.vim
 
-autocmd CursorHold * checktime
-
-let netrw_liststyle = 3
-
-set autoread
-set colorcolumn=81
-set exrc
 set hlsearch
 set ignorecase
 set number
