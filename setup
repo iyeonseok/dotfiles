@@ -9,12 +9,7 @@ function main {
 }
 
 function update {
-  update_git_completion
   update_git_submodules
-}
-
-function update_git_completion {
-  curl --output "${dotfiles_root_path}/bash/git_completion.bash" --silent https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
 }
 
 function update_git_submodules {
@@ -22,8 +17,8 @@ function update_git_submodules {
 }
 
 function link_all {
-  setup_bash
   setup_git
+  setup_shell
   setup_tmux
   setup_vim
 
@@ -32,15 +27,13 @@ function link_all {
   fi
 }
 
-function setup_bash {
-  link bash/bashrc.bash ~/.bashrc
-  link bash/bash_profile.bash ~/.bash_profile
-  link bash/git_completion.bash ~/.git_completion.bash
-}
-
 function setup_git {
   link git/gitconfig ~/.gitconfig
   link git/gitignore ~/.gitignore
+}
+
+function setup_shell {
+  link shell/zshrc ~/.zshrc
 }
 
 function setup_tmux {
